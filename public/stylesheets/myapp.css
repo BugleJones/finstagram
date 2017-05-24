@@ -1,14 +1,18 @@
+head {
+    font-family: "Lobster", cursive;
+}
 header {
     background-color: #125688;
     color: #E8FDFF;
+    font-family: "Lobster", cursive;
 }
 body {
     background-color: whitesmoke;
-    font-family: 'Lobster', cursive;
 }
 main {
     background-color: white;
     padding: 16px;
+    font-family: "Lobster", cursive;
 }
 .post {
     margin-bottom: 60px;
