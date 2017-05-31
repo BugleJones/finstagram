@@ -7,7 +7,7 @@ def humanized_time_ago(time_ago_in_minutes)
 end
 
 get '/' do
-    post_bass = {
+    @post_bass = {
         username: "ItsMeFish",
         avatar_url: "http://www.taiwilliams.com/blog/wp-content/uploads/2014/08/tai-spike-august03-09.jpg",
         photo_url: "http://www.taiwilliams.com/blog/wp-content/uploads/2014/08/tai-spike-august03-09.jpg",
@@ -20,7 +20,7 @@ get '/' do
         }]
     }
    
-    post_catfish = {
+    @post_catfish = {
         username: "Whiskers4Days",
         avatar_url: "https://1source.basspro.com/images/Catfish%20in%20dark%20waters.jpg",
         photo_url: "https://1source.basspro.com/images/Catfish%20in%20dark%20waters.jpg",
@@ -33,7 +33,7 @@ get '/' do
         }]
     }
     
-     post_drawings = {
+     @post_drawings = {
         username: "HopelessFlounderer",
         avatar_url: "http://www.how-to-draw-cartoons-online.com/image-files/cartoon-catfish-6.gif",
         photo_url: "http://www.how-to-draw-cartoons-online.com/image-files/cartoon-catfish-6.gif",
@@ -46,5 +46,8 @@ get '/' do
         }]
     }
     
-    [post_bass, post_catfish, post_drawings].to_s
+    @posts = [@post_bass, @post_catfish, @post_drawings]
+
+erb(:index)
+
 end
