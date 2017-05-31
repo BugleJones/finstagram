@@ -9,7 +9,7 @@ end
 get '/' do
     @post_bass = {
         username: "ItsMeFish",
-        avatar_url: "http://www.taiwilliams.com/blog/wp-content/uploads/2014/08/tai-spike-august03-09.jpg",
+        avatar_url: "http://kristiemercer.com/wp-content/uploads/2014/04/fish.gif",
         photo_url: "http://www.taiwilliams.com/blog/wp-content/uploads/2014/08/tai-spike-august03-09.jpg",
         humanized_time_ago: humanized_time_ago(10),
         like_count: 0,
@@ -22,7 +22,7 @@ get '/' do
    
     @post_catfish = {
         username: "Whiskers4Days",
-        avatar_url: "https://1source.basspro.com/images/Catfish%20in%20dark%20waters.jpg",
+        avatar_url: "http://orig13.deviantart.net/cdcb/f/2012/176/a/b/trippy_fish_by_sean83421-d54rut3.jpg",
         photo_url: "https://1source.basspro.com/images/Catfish%20in%20dark%20waters.jpg",
         humanized_time_ago: humanized_time_ago(4),
         like_count: 2,
@@ -35,7 +35,7 @@ get '/' do
     
      @post_drawings = {
         username: "HopelessFlounderer",
-        avatar_url: "http://www.how-to-draw-cartoons-online.com/image-files/cartoon-catfish-6.gif",
+        avatar_url: "http://i58.tinypic.com/2it3hhg.jpg",
         photo_url: "http://www.how-to-draw-cartoons-online.com/image-files/cartoon-catfish-6.gif",
         humanized_time_ago: humanized_time_ago(10),
         like_count: 134,
