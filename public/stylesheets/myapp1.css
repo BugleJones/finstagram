@@ -2,20 +2,22 @@ head {
     font-family: "Lobster", cursive;
 }
 header {
-    background-color: #125688;
-    color: #E8FDFF;
+    background-color: #6baddc;
+    color: #303030;
     font-family: "Lobster", cursive;
 }
 body {
     background-color: whitesmoke;
+    font-family: serif;
 }
 main {
     background-color: white;
     padding: 16px;
-    font-family: "Lobster", cursive;
+    font-family: serif;
 }
 .post {
     margin-bottom: 60px;
+    font-family: serif;
 }
 .post .user-info img {
     border-radius: 50%;
