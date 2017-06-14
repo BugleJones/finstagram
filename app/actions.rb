@@ -23,7 +23,6 @@ get "/signup" do     # if a user navigates to the path "/signup"
     username   = params[:username]
     password   = params[:password]
     
-
     @user = User.new({ email: email, avatar_url: avatar_url, username: username, password: password})
     
     if @user.save
@@ -77,8 +76,8 @@ post "/login" do
 end
 
 get "/logout" do
-    session[:user_id] = nil
-    redirect to("/")
+    session[:user_id] = nil?
+    redirect to ("/")
 end
 
 #require Are you a fish checkbox?
