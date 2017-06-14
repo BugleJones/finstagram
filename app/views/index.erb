@@ -1,9 +1,4 @@
-    <header>
-        <a class="logo" href="#">
-            <img src="/images/rsz_fish-512.png" alt="Fishtagram Logo">
-        </a>
-        <h1>Fishtagram</h1>
-        <div class="login-info">
+      <div class="login-info">
             <% if current_user %>
                 <%= current_user.username %>
                 <a href="/logout">Logout</a>
@@ -12,7 +7,6 @@
                 <a href="/signup">Signup</a>
             <% end %>
         </div>
-    </header>
     <main role="main">
         <% @posts.each do |post| %>
             <article class="post">

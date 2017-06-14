@@ -7,6 +7,21 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
         <title>Fishtagram</title>
     </head>
+    <header>
+        <a class="logo" href="#">
+            <img src="/images/rsz_fish-512.png" alt="Fishtagram Logo">
+        </a>
+        <h1>Fishtagram</h1>
+        <div class="login-info">
+            <% if current_user %>
+                <%= current_user.username %>
+                <a href="/logout">Logout</a>
+            <% else %>
+                <a href="/login">Login</a>
+                <a href="/signup">Signup</a>
+            <% end %>
+        </div>
+    </header>
     <body>
         <%= yield %>
     </body>
