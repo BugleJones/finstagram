@@ -80,4 +80,20 @@ get "/logout" do
     redirect to ("/")
 end
 
+get "/posts/new" do
+    erb(:"posts/new")
+end
+
+post "/posts" do
+    photo_url = params[:photo_url]
+    
+    @post = Post.new({ photo_url: photo_url, user_id: current_user.id })
+    
+    if @post.save
+        redirect(to("/"))
+    else
+        @posts.errors.full_messages.inspect
+    end
+end
+
 #require Are you a fish checkbox?
