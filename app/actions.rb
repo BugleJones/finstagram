@@ -18,18 +18,8 @@ get '/' do
 end
 
 get "/signup" do     # if a user navigates to the path "/signup"
-    email      = params[:email]
-    avatar_url = params[:avatar_url]
-    username   = params[:username]
-    password   = params[:password]
-    
-    @user = User.new({ email: email, avatar_url: avatar_url, username: username, password: password})
-    
-    if @user.save
-        redirect to("/login")
-    else
-        erb(:signup)
-    end
+    @user = User.new()
+    erb(:signup)
 end
 
 post "/signup" do
@@ -81,6 +71,7 @@ get "/logout" do
 end
 
 get "/posts/new" do
+    @post = Post.new
     erb(:"posts/new")
 end
 
@@ -92,8 +83,13 @@ post "/posts" do
     if @post.save
         redirect(to("/"))
     else
-        @posts.errors.full_messages.inspect
+        erb(:"posts/new")
     end
+end
+
+get "/posts/:id" do
+    @post = Post.find(params[:id])
+    erb(:"posts/show")
 end
 
 #require Are you a fish checkbox?

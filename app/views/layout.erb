@@ -7,11 +7,14 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
         <title>Fishtagram</title>
     </head>
-    <header>
+    <body>
+        <header>
         <a class="logo" href="#">
             <img src="/images/rsz_fish-512.png" alt="Fishtagram Logo">
         </a>
-        <h1>Fishtagram</h1>
+        <h1>
+            <a href="/">Fishtagram</a>
+        </h1>
         <div class="login-info">
             <% if current_user %>
                 <%= current_user.username %>
@@ -22,7 +25,8 @@
             <% end %>
         </div>
     </header>
-    <body>
+    <main role="main">
         <%= yield %>
+    </main>
     </body>
 </html>
